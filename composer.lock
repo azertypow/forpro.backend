@@ -1,9 +1,14 @@
 {
+    "_readme": [
+        "This file locks the dependencies of your project to a known state",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
+        "This file is @generated automatically"
+    ],
+    "content-hash": "8c333d90ff2063a26c3e5b0a4c68761e",
     "packages": [
         {
             "name": "claviska/simpleimage",
             "version": "3.6.5",
-            "version_normalized": "3.6.5.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/claviska/SimpleImage.git",
@@ -20,9 +25,7 @@
                 "league/color-extractor": "0.3.*",
                 "php": ">=5.6.0"
             },
-            "time": "2021-12-01T12:42:55+00:00",
             "type": "library",
-            "installation-source": "dist",
             "autoload": {
                 "psr-0": {
                     "claviska": "src/"
@@ -50,12 +53,11 @@
                     "type": "github"
                 }
             ],
-            "install-path": "../claviska/simpleimage"
+            "time": "2021-12-01T12:42:55+00:00"
         },
         {
             "name": "filp/whoops",
             "version": "2.14.5",
-            "version_normalized": "2.14.5.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/filp/whoops.git",
@@ -80,14 +82,12 @@
                 "symfony/var-dumper": "Pretty print complex values better with var-dumper available",
                 "whoops/soap": "Formats errors as SOAP responses"
             },
-            "time": "2022-01-07T12:00:00+00:00",
             "type": "library",
             "extra": {
                 "branch-alias": {
                     "dev-master": "2.7-dev"
                 }
             },
-            "installation-source": "dist",
             "autoload": {
                 "psr-4": {
                     "Whoops\\": "src/Whoops/"
@@ -124,12 +124,92 @@
                     "type": "github"
                 }
             ],
-            "install-path": "../filp/whoops"
+            "time": "2022-01-07T12:00:00+00:00"
+        },
+        {
+            "name": "getkirby/cms",
+            "version": "3.6.5",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/getkirby/kirby.git",
+                "reference": "40d2ee98b51644b8eefa814c37f3b402a9fdb994"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/getkirby/kirby/zipball/40d2ee98b51644b8eefa814c37f3b402a9fdb994",
+                "reference": "40d2ee98b51644b8eefa814c37f3b402a9fdb994",
+                "shasum": ""
+            },
+            "require": {
+                "claviska/simpleimage": "3.6.5",
+                "ext-ctype": "*",
+                "ext-mbstring": "*",
+                "filp/whoops": "2.14.5",
+                "getkirby/composer-installer": "^1.2.1",
+                "laminas/laminas-escaper": "2.10.0",
+                "michelf/php-smartypants": "1.8.1",
+                "php": ">=7.4.0 <8.2.0",
+                "phpmailer/phpmailer": "6.5.4",
+                "psr/log": "1.1.4",
+                "symfony/polyfill-intl-idn": "1.25.0",
+                "symfony/polyfill-mbstring": "1.25.0"
+            },
+            "replace": {
+                "symfony/polyfill-php72": "*"
+            },
+            "type": "kirby-cms",
+            "extra": {
+                "unused": [
+                    "symfony/polyfill-intl-idn"
+                ]
+            },
+            "autoload": {
+                "files": [
+                    "config/setup.php",
+                    "config/helpers.php"
+                ],
+                "psr-4": {
+                    "Kirby\\": "src/"
+                },
+                "classmap": [
+                    "dependencies/"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "proprietary"
+            ],
+            "authors": [
+                {
+                    "name": "Kirby Team",
+                    "email": "support@getkirby.com",
+                    "homepage": "https://getkirby.com"
+                }
+            ],
+            "description": "The Kirby 3 core",
+            "homepage": "https://getkirby.com",
+            "keywords": [
+                "cms",
+                "core",
+                "kirby"
+            ],
+            "support": {
+                "email": "support@getkirby.com",
+                "forum": "https://forum.getkirby.com",
+                "issues": "https://github.com/getkirby/kirby/issues",
+                "source": "https://github.com/getkirby/kirby"
+            },
+            "funding": [
+                {
+                    "url": "https://getkirby.com/buy",
+                    "type": "custom"
+                }
+            ],
+            "time": "2022-04-19T12:49:55+00:00"
         },
         {
             "name": "getkirby/composer-installer",
             "version": "1.2.1",
-            "version_normalized": "1.2.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/getkirby/composer-installer.git",
@@ -147,12 +227,10 @@
             "require-dev": {
                 "composer/composer": "^1.8 || ^2.0"
             },
-            "time": "2020-12-28T12:54:39+00:00",
             "type": "composer-plugin",
             "extra": {
                 "class": "Kirby\\ComposerInstaller\\Plugin"
             },
-            "installation-source": "dist",
             "autoload": {
                 "psr-4": {
                     "Kirby\\": "src/"
@@ -174,12 +252,11 @@
                     "type": "custom"
                 }
             ],
-            "install-path": "../getkirby/composer-installer"
+            "time": "2020-12-28T12:54:39+00:00"
         },
         {
             "name": "laminas/laminas-escaper",
             "version": "2.10.0",
-            "version_normalized": "2.10.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/laminas/laminas-escaper.git",
@@ -207,9 +284,7 @@
                 "psalm/plugin-phpunit": "^0.16.1",
                 "vimeo/psalm": "^4.22.0"
             },
-            "time": "2022-03-08T20:15:36+00:00",
             "type": "library",
-            "installation-source": "dist",
             "autoload": {
                 "psr-4": {
                     "Laminas\\Escaper\\": "src/"
@@ -239,12 +314,11 @@
                     "type": "community_bridge"
                 }
             ],
-            "install-path": "../laminas/laminas-escaper"
+            "time": "2022-03-08T20:15:36+00:00"
         },
         {
             "name": "league/color-extractor",
             "version": "0.3.2",
-            "version_normalized": "0.3.2.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/thephpleague/color-extractor.git",
@@ -267,9 +341,7 @@
                 "friendsofphp/php-cs-fixer": "~2",
                 "phpunit/phpunit": "~5"
             },
-            "time": "2016-12-15T09:30:02+00:00",
             "type": "library",
-            "installation-source": "dist",
             "autoload": {
                 "psr-4": {
                     "": "src"
@@ -300,12 +372,11 @@
                 "issues": "https://github.com/thephpleague/color-extractor/issues",
                 "source": "https://github.com/thephpleague/color-extractor/tree/master"
             },
-            "install-path": "../league/color-extractor"
+            "time": "2016-12-15T09:30:02+00:00"
         },
         {
             "name": "michelf/php-smartypants",
             "version": "1.8.1",
-            "version_normalized": "1.8.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/michelf/php-smartypants.git",
@@ -320,9 +391,7 @@
             "require": {
                 "php": ">=5.3.0"
             },
-            "time": "2016-12-13T01:01:17+00:00",
             "type": "library",
-            "installation-source": "dist",
             "autoload": {
                 "psr-0": {
                     "Michelf": ""
@@ -357,12 +426,11 @@
                 "issues": "https://github.com/michelf/php-smartypants/issues",
                 "source": "https://github.com/michelf/php-smartypants/tree/1.8.1"
             },
-            "install-path": "../michelf/php-smartypants"
+            "time": "2016-12-13T01:01:17+00:00"
         },
         {
             "name": "phpmailer/phpmailer",
             "version": "v6.5.4",
-            "version_normalized": "6.5.4.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/PHPMailer/PHPMailer.git",
@@ -398,9 +466,7 @@
                 "stevenmaguire/oauth2-microsoft": "Needed for Microsoft XOAUTH2 authentication",
                 "symfony/polyfill-mbstring": "To support UTF-8 if the Mbstring PHP extension is not enabled (^1.2)"
             },
-            "time": "2022-02-17T08:19:04+00:00",
             "type": "library",
-            "installation-source": "dist",
             "autoload": {
                 "psr-4": {
                     "PHPMailer\\PHPMailer\\": "src/"
@@ -438,12 +504,11 @@
                     "type": "github"
                 }
             ],
-            "install-path": "../phpmailer/phpmailer"
+            "time": "2022-02-17T08:19:04+00:00"
         },
         {
             "name": "psr/log",
             "version": "1.1.4",
-            "version_normalized": "1.1.4.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/php-fig/log.git",
@@ -458,14 +523,12 @@
             "require": {
                 "php": ">=5.3.0"
             },
-            "time": "2021-05-03T11:20:27+00:00",
             "type": "library",
             "extra": {
                 "branch-alias": {
                     "dev-master": "1.1.x-dev"
                 }
             },
-            "installation-source": "dist",
             "autoload": {
                 "psr-4": {
                     "Psr\\Log\\": "Psr/Log/"
@@ -491,12 +554,11 @@
             "support": {
                 "source": "https://github.com/php-fig/log/tree/1.1.4"
             },
-            "install-path": "../psr/log"
+            "time": "2021-05-03T11:20:27+00:00"
         },
         {
             "name": "symfony/polyfill-intl-idn",
             "version": "v1.25.0",
-            "version_normalized": "1.25.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/polyfill-intl-idn.git",
@@ -516,7 +578,6 @@
             "suggest": {
                 "ext-intl": "For best performance"
             },
-            "time": "2021-09-14T14:02:44+00:00",
             "type": "library",
             "extra": {
                 "branch-alias": {
@@ -527,7 +588,6 @@
                     "url": "https://github.com/symfony/polyfill"
                 }
             },
-            "installation-source": "dist",
             "autoload": {
                 "files": [
                     "bootstrap.php"
@@ -581,12 +641,11 @@
                     "type": "tidelift"
                 }
             ],
-            "install-path": "../symfony/polyfill-intl-idn"
+            "time": "2021-09-14T14:02:44+00:00"
         },
         {
             "name": "symfony/polyfill-intl-normalizer",
             "version": "v1.25.0",
-            "version_normalized": "1.25.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/polyfill-intl-normalizer.git",
@@ -604,7 +663,6 @@
             "suggest": {
                 "ext-intl": "For best performance"
             },
-            "time": "2021-02-19T12:13:01+00:00",
             "type": "library",
             "extra": {
                 "branch-alias": {
@@ -615,7 +673,6 @@
                     "url": "https://github.com/symfony/polyfill"
                 }
             },
-            "installation-source": "dist",
             "autoload": {
                 "files": [
                     "bootstrap.php"
@@ -668,12 +725,11 @@
                     "type": "tidelift"
                 }
             ],
-            "install-path": "../symfony/polyfill-intl-normalizer"
+            "time": "2021-02-19T12:13:01+00:00"
         },
         {
             "name": "symfony/polyfill-mbstring",
             "version": "v1.25.0",
-            "version_normalized": "1.25.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/polyfill-mbstring.git",
@@ -694,7 +750,6 @@
             "suggest": {
                 "ext-mbstring": "For best performance"
             },
-            "time": "2021-11-30T18:21:41+00:00",
             "type": "library",
             "extra": {
                 "branch-alias": {
@@ -705,7 +760,6 @@
                     "url": "https://github.com/symfony/polyfill"
                 }
             },
-            "installation-source": "dist",
             "autoload": {
                 "files": [
                     "bootstrap.php"
@@ -754,9 +808,18 @@
                     "type": "tidelift"
                 }
             ],
-            "install-path": "../symfony/polyfill-mbstring"
+            "time": "2021-11-30T18:21:41+00:00"
         }
     ],
-    "dev": true,
-    "dev-package-names": []
+    "packages-dev": [],
+    "aliases": [],
+    "minimum-stability": "stable",
+    "stability-flags": [],
+    "prefer-stable": false,
+    "prefer-lowest": false,
+    "platform": {
+        "php": ">=7.4.0 <8.2.0"
+    },
+    "platform-dev": [],
+    "plugin-api-version": "2.1.0"
 }
