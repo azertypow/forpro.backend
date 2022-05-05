@@ -1,0 +1,11 @@
+title: Fondation
+
+fields:
+  cover:
+    label: image de couverture
+    type: files
+    query: page.images
+    multiple: false
+  text:
+    label: texte
+    type: textarea

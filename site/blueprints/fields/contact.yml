@@ -1,0 +1,24 @@
+title: partners
+
+type: structure
+
+fields:
+  name:
+    label: nom
+    type: text
+  link:
+    label: lien
+    type: url
+  logo:
+    label: logo
+    type: files
+    query: page.images
+    multiple: false
+  text:
+    label: texte de description
+    type: writer
+    nodes:
+      - heading: false
+      - paragraph: false
+      - bulletList: false
+      - orderedList: false

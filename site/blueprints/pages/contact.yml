@@ -1,0 +1,9 @@
+title: Contacte
+
+fields:
+  text:
+    label: texte
+    type: textarea
+  partners:
+    label: partenaire(s)
+    extends: fields/contact

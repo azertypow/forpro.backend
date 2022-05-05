@@ -1,0 +1,13 @@
+title: Evolution
+
+fields:
+  gallery:
+    label: galerie d'images
+    type: files
+    query: page.images
+  text:
+    label: texte
+    type: textarea
+  timeline:
+    label: timeline
+    extends: fields/timeline

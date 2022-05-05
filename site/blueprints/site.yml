@@ -1,2 +1,21 @@
-preset: pages
-unlisted: true
+sections:
+  draft:
+    label: brouillons
+    type: pages
+    status: draft
+    layout: cards
+    size: medium
+    image: false
+  unlisted:
+    label: sections non listées
+    type: pages
+    status: unlisted
+    layout: cards
+    size: medium
+    image: false
+  sections:
+    type: pages
+    status: listed
+    layout: cards
+    size: medium
+    image: false

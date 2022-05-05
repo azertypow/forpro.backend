@@ -1,0 +1,16 @@
+title: Introduction
+
+fields:
+  cover:
+    label: image de couverture
+    type: files
+    query: page.images
+    multiple: false
+  text:
+    label: description
+    type: writer
+    nodes:
+      - heading: false
+      - paragraph: false
+      - bulletList: false
+      - orderedList: false

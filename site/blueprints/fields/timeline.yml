@@ -1,0 +1,19 @@
+title: timeline
+
+type: structure
+
+fields:
+  date:
+    type: date
+  nom:
+    type: text
+  categorie:
+    type: tags
+  text:
+    label: texte de description
+    type: writer
+    nodes:
+      - heading: false
+      - paragraph: false
+      - bulletList: false
+      - orderedList: false

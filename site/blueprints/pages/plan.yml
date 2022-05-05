@@ -1,0 +1,11 @@
+title: Plan
+
+fields:
+  text:
+    label: description
+    type: writer
+    nodes:
+      - heading: false
+      - paragraph: false
+      - bulletList: false
+      - orderedList: false
