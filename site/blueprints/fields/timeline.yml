@@ -8,6 +8,7 @@ fields:
   nom:
     type: text
   categorie:
+    label: Catégorie
     type: tags
   text:
     label: texte de description
