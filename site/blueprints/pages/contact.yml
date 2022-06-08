@@ -1,5 +1,9 @@
 title: Contacte
 
+status:
+  draft: Brouillon
+  listed: Public
+
 fields:
   text:
     label: texte

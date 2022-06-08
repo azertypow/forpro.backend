@@ -1,5 +1,9 @@
 title: Plan
 
+status:
+  draft: Brouillon
+  listed: Public
+
 fields:
   text:
     label: description

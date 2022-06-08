@@ -1,5 +1,9 @@
 title: Introduction
 
+status:
+  draft: Brouillon
+  listed: Public
+
 fields:
   cover:
     label: image de couverture

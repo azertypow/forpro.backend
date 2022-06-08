@@ -1,0 +1,18 @@
+title: Forpro
+description: Administration global. Accès au contenu de l'ensemble du site. Modification du contenu et modification des status.
+
+permissions:
+  pages:
+    changeSlug: false
+    changeStatus: true
+    changeTemplate: false
+    changeTitle: true
+    create: true
+    delete: false
+    duplicate: true
+    preview: false
+    read: true
+    sort: true
+    update: true
+
+  users: false

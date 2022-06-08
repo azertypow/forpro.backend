@@ -6,13 +6,19 @@ sections:
     layout: cards
     size: medium
     image: false
-  unlisted:
-    label: sections non listées
-    type: pages
-    status: unlisted
-    layout: cards
-    size: medium
-    image: false
+    template:
+      - contact
+      - evolution
+      - fondation
+      - introduction
+      - plan
+#  unlisted:
+#    label: sections non listées
+#    type: pages
+#    status: unlisted
+#    layout: cards
+#    size: medium
+#    image: false
   sections:
     type: pages
     status: listed

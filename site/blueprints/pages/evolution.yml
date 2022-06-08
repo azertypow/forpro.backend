@@ -1,5 +1,9 @@
 title: Evolution
 
+status:
+  draft: Brouillon
+  listed: Public
+
 fields:
   gallery:
     label: galerie d'images
