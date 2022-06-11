@@ -18,6 +18,14 @@ fields:
   categorie:
     label: Catégorie
     type: tags
+    accept: options
+    help: "Tags accéptés: - Design - Architecture - Photography - 3D - Web"
+    options:
+      - Design
+      - Architecture
+      - Photography
+      - 3D
+      - Web
   text:
     label: texte de description
     type: writer
