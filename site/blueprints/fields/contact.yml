@@ -2,6 +2,14 @@ title: partners
 
 type: structure
 
+
+columns:
+  name:
+    width: 3/5
+  link:
+    width: 1/5
+  logo:
+    width: 1/10
 fields:
   name:
     label: nom
