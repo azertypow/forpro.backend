@@ -8,6 +8,7 @@ fields:
   text:
     label: texte
     type: textarea
+    placeholder: Texte de description de la section
   partners:
     label: partenaire(s)
     extends: fields/contact
