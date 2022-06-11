@@ -2,6 +2,14 @@ title: timeline
 
 type: structure
 
+
+columns:
+  nom:
+    width: 1/5
+  categorie:
+    width: 3/5
+  date:
+    width: 1/10
 fields:
   date:
     type: date
