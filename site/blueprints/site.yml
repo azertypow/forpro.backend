@@ -4,7 +4,7 @@ sections:
     type: pages
     status: draft
     layout: cards
-    size: medium
+    size: tiny
     image: false
     template:
       - contact
@@ -17,5 +17,5 @@ sections:
     type: pages
     status: listed
     layout: cards
-    size: medium
+    size: huge
     image: false
