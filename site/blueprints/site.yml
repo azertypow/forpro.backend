@@ -1,6 +1,6 @@
 sections:
   draft:
-    label: brouillons
+    label: non-publié.s
     type: pages
     status: draft
     layout: cards
@@ -12,14 +12,8 @@ sections:
       - fondation
       - introduction
       - plan
-#  unlisted:
-#    label: sections non listées
-#    type: pages
-#    status: unlisted
-#    layout: cards
-#    size: medium
-#    image: false
   sections:
+    label: publié.s
     type: pages
     status: listed
     layout: cards
