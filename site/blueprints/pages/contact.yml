@@ -6,9 +6,9 @@ status:
 
 fields:
   text:
-    label: texte
+    label: Texte
     type: textarea
     placeholder: Texte de description de la section
   partners:
-    label: partenaire(s)
+    label: Partenaire(s)
     extends: fields/contact

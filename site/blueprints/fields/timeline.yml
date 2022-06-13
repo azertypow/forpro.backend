@@ -27,7 +27,7 @@ fields:
       - 3D
       - Web
   text:
-    label: texte de description
+    label: Texte de description
     type: writer
     nodes:
       - heading: false

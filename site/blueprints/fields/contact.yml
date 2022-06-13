@@ -12,18 +12,18 @@ columns:
     width: 1/10
 fields:
   name:
-    label: nom
+    label: Nom
     type: text
   link:
-    label: lien
+    label: Lien
     type: url
   logo:
-    label: logo
+    label: Logo
     type: files
     query: page.images
     multiple: false
   text:
-    label: texte de description
+    label: Texte de description
     type: writer
     nodes:
       - heading: false

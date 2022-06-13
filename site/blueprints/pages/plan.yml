@@ -6,7 +6,7 @@ status:
 
 fields:
   text:
-    label: description
+    label: Description
     type: writer
     nodes:
       - heading: false

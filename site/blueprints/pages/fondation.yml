@@ -6,10 +6,10 @@ status:
 
 fields:
   cover:
-    label: image de couverture
+    label: Image de couverture
     type: files
     query: page.images
     multiple: false
   text:
-    label: texte
+    label: Texte
     type: textarea

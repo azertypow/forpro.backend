@@ -1,6 +1,6 @@
 sections:
   draft:
-    label: non-publié.s
+    label: Non-publié.s
     type: pages
     status: draft
     layout: cards
@@ -13,7 +13,7 @@ sections:
       - introduction
       - plan
   sections:
-    label: publié.s
+    label: Publié.s
     type: pages
     status: listed
     layout: cards

@@ -6,12 +6,12 @@ status:
 
 fields:
   gallery:
-    label: galerie d'images
+    label: Galerie d'images
     type: files
     query: page.images
   text:
-    label: texte
+    label: Texte
     type: textarea
   timeline:
-    label: timeline
+    label: Timeline
     extends: fields/timeline
