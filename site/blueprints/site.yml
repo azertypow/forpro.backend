@@ -9,7 +9,7 @@ sections:
     template:
       - contact
       - evolution
-      - fondation
+      - foundation
       - introduction
       - plan
   sections:

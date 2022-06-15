@@ -1,12 +1,17 @@
 <?php
 
+use Kirby\Cms\Page;
+
 return [
     'debug' => true,
     'routes' => [
         [
             'pattern' => '/',
             'action'  => function () {
-                return 'Welcome to ForPro api';
+                return new Page([
+                    'slug'      => 'api',
+                    'template'  => "api-home",
+                ]);
             }
         ],
     ],
