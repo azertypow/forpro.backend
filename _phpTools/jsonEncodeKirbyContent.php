@@ -1,47 +1,62 @@
 <?php
 use Kirby\Cms;
+use Kirby\Cms\Page;
+use Kirby\Cms\StructureObject;
 
-function getJsonEncodeFromSectionTypePlan(Cms\Page $page): array
+function getJsonEncodeFromSectionTypePlan(Page $page): array
 {
     return [
+        'status'=> $page->status(),
+        'type'  => 'plan',
         'title' => $page->title()->value(),
         'text'  => $page->text()->value(),
     ];
 }
 
-function getJsonEncodeFromSectionTypeIntroduction(Cms\Page $page): array
+function getJsonEncodeFromSectionTypeIntroduction(Page $page): array
 {
     return [
+        'status'=> $page->status(),
+        'type'  => 'introduction',
         'title' => $page->title()->value(),
-        'cover' => (fn($page) => $page->cover()->toFiles()->map(
-            fn($file) => getJsonEncodeImageData($file)
-        )->data())($page),
+        'cover' => getImageArrayDataInPage($page),
         'text'  => $page->text()->value(),
     ];
 }
 
-function getJsonEncodeFromSectionTypeFoundation(Cms\Page $page): array
+function getJsonEncodeFromSectionTypeFoundation(Page $page): array
 {
     return [
+        'status'=> $page->status(),
+        'type'  => 'foundation',
         'title' => $page->title()->value(),
-        'cover' => (fn($page) => $page->cover()->toFiles()->map(
-            fn($file) => getJsonEncodeImageData($file)
-        )->data())($page),
-        'text'  => $page->text()->value(),
+        'cover' => getImageArrayDataInPage($page),
+        'text'  => $page->text()->kirbytext()->value(),
     ];
 }
 
-function getJsonEncodeFromSectionTypeEvolution(Cms\Page $page): array
+function getJsonEncodeFromSectionTypeEvolution(Page $page): array
 {
     return [
-        'title' => $page->title()->value(),
-        'gallery' => (fn($page) => $page->gallery()->toFiles()->map(
-            fn($file) => getJsonEncodeImageData($file)
-        )->data())($page),
-        'text'  => $page->text()->value(),
+        'status'=> $page->status(),
+        'type'      => 'evolution',
+        'title'     => $page->title()->value(),
+        'gallery'   => getImageArrayDataInPage($page),
+        'text'      => $page->text()->kirbytext()->value(),
+        'timeline'  => $page->timeline()->toStructure()->map(
+            fn($timelineItem) => getTimelineItemStructure($timelineItem)
+        )->data(),
     ];
 }
 
+// todo: getJsonEncodeFromSectionTypeContact()
+
+function getImageArrayDataInPage(Page|StructureObject $page): ?array
+{
+    return count($page->cover()->toFiles()->toArray()) > 0 ? $page->cover()->toFiles()->map(
+        fn($file) => getJsonEncodeImageData($file)
+    )->data() : null;
+}
 
 function getJsonEncodeImageData(Cms\File $file): array
 {
@@ -56,5 +71,15 @@ function getJsonEncodeImageData(Cms\File $file): array
             'reg'       => $file->resize(1280)->url(),
             'large'     => $file->resize(1920)->url(),
         ]
+    ];
+}
+
+function getTimelineItemStructure(StructureObject $timelineItem): array {
+    return [
+        "date"          => $timelineItem->date()->value(),
+        "title"         => $timelineItem->name()->value(),
+        "categories"    => $timelineItem->categories()->value(),
+        "text"          => $timelineItem->text()->value(),
+        'cover'         => getImageArrayDataInPage($timelineItem),
     ];
 }

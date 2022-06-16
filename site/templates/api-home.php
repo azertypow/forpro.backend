@@ -1,4 +1,7 @@
 <?php
+
+header("Access-Control-Allow-Origin: *");
+
 use Kirby\Cms;
 include_once '_phpTools/jsonEncodeKirbyContent.php';
 
@@ -28,5 +31,6 @@ $pagesToReturn = $sections->map(function (Cms\Page $value){
 });
 
 echo json_encode([
-  'content'    => $pagesToReturn->data(),
+  'title'       => $site->title()->value(),
+  'sections'    => $pagesToReturn->data(),
 ]);

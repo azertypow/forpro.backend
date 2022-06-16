@@ -13,9 +13,9 @@ columns:
 fields:
   date:
     type: date
-  nom:
+  name:
     type: text
-  categorie:
+  categories:
     label: Catégorie
     type: tags
     accept: options
@@ -34,3 +34,8 @@ fields:
       - paragraph: false
       - bulletList: false
       - orderedList: false
+  cover:
+    label: Image de couverture
+    type: files
+    query: page.images
+    multiple: false
