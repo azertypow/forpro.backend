@@ -21,16 +21,20 @@ $sections = $site->childrenAndDrafts();
 
 $pagesToReturn = $sections->map(function (Cms\Page $value){
 
-  if($value->blueprint()->name() == 'pages/contact')      return 'contact';
   if($value->blueprint()->name() == 'pages/evolution')    return getJsonEncodeFromSectionTypeEvolution($value);
   if($value->blueprint()->name() == 'pages/foundation')   return getJsonEncodeFromSectionTypeFoundation($value);
   if($value->blueprint()->name() == 'pages/introduction') return getJsonEncodeFromSectionTypeIntroduction($value);
   if($value->blueprint()->name() == 'pages/plan')         return getJsonEncodeFromSectionTypePlan($value);
+  if($value->blueprint()->name() == 'pages/team')         return 'team!';
 
   return 'default';
 });
 
 echo json_encode([
   'title'       => $site->title()->value(),
+  'footer'      => [
+    'left'        => $site->textLeft()->value(),
+    'right'       => $site->textRight()->value(),
+  ],
   'sections'    => $pagesToReturn->data(),
 ]);

@@ -1,24 +1,68 @@
 options:
   changeTitle: false
 
-sections:
-  draft:
-    label: Non-publié.s
-    type: pages
-    status: draft
-    layout: cards
-    size: tiny
-    image: false
-    template:
-      - team
-      - evolution
-      - foundation
-      - introduction
-      - plan
-  sections:
-    label: Publié.s
-    type: pages
-    status: listed
-    layout: cards
-    size: huge
-    image: false
+
+columns:
+  sectionTitle:
+    width: 1/1
+    fields:
+      sectionTitleSettings:
+        label: Sections du site
+        type: headline
+
+  top:
+    width: 1/1
+    sections:
+      draft:
+        label: Non-publié.s
+        type: pages
+        status: draft
+        layout: cards
+        size: tiny
+        image: false
+        template:
+          - team
+          - evolution
+          - foundation
+          - introduction
+          - plan
+      sections:
+        label: Publié.s
+        type: pages
+        status: listed
+        layout: cards
+        size: huge
+        image: false
+
+
+  footerTitle:
+    width: 1/1
+    fields:
+      footerTitleSettings:
+        label: Bas de page du site
+        type: headline
+
+  left:
+    width: 1/2
+    sections:
+      footerLeft:
+        type: fields
+        fields:
+          textLeft:
+            label: gauche
+            type: writer
+            marks:
+              - bold
+              - link
+            nodes: false
+
+  right:
+    width: 1/2
+    fields:
+      textRight:
+        label: droite
+        type: writer
+        marks:
+          - bold
+          - link
+        nodes: false
