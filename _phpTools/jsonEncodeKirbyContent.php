@@ -106,7 +106,7 @@ function getTeamItemStructure(StructureObject $teamMemberItem): array {
         'name'    => $teamMemberItem->name()->value(),
         'topic'   => $teamMemberItem->topic()->value(),
         'link'    => $teamMemberItem->link()->value(),
-        'photo'   => getImageArrayDataInPage($teamMemberItem),
+        'cover'   => getImageArrayDataInPage($teamMemberItem),
         'text'    => $teamMemberItem->text()->value(),
     ];
 }
