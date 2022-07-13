@@ -13,6 +13,23 @@ function getJsonEncodeFromSectionTypePlan(Page $page): array
     ];
 }
 
+function getJsonEncodeFromSectionTypeTeam(Page $page): array
+{
+    return [
+        'status'=> $page->status(),
+        'type'  => 'team',
+        'title' => $page->title()->value(),
+        'text'      => $page->text()->value(),
+        'team'      => $page->team()->toStructure()->map(
+            fn($teamMemberItem) => getTeamItemStructure($teamMemberItem)
+        )->data(),
+        'partners'  => $page->team()->toStructure()->map(
+            fn($partnersItem) => getPartenersStructure($partnersItem)
+        )->data(),
+    ];
+}
+
+
 function getJsonEncodeFromSectionTypeIntroduction(Page $page): array
 {
     return [
@@ -81,5 +98,24 @@ function getTimelineItemStructure(StructureObject $timelineItem): array {
         "categories"    => $timelineItem->categories()->value(),
         "text"          => $timelineItem->text()->value(),
         'cover'         => getImageArrayDataInPage($timelineItem),
+    ];
+}
+
+function getTeamItemStructure(StructureObject $teamMemberItem): array {
+    return [
+        'name'    => $teamMemberItem->name()->value(),
+        'topic'   => $teamMemberItem->topic()->value(),
+        'link'    => $teamMemberItem->link()->value(),
+        'photo'   => getImageArrayDataInPage($teamMemberItem),
+        'text'    => $teamMemberItem->text()->value(),
+    ];
+}
+
+function getPartenersStructure(StructureObject $teamMemberItem): array {
+    return [
+        'name'    => $teamMemberItem->name()->value(),
+        'topic'   => $teamMemberItem->topic()->value(),
+        'link'    => $teamMemberItem->link()->value(),
+        'text'    => $teamMemberItem->text()->value(),
     ];
 }

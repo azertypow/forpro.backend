@@ -25,7 +25,7 @@ $pagesToReturn = $sections->map(function (Cms\Page $value){
   if($value->blueprint()->name() == 'pages/foundation')   return getJsonEncodeFromSectionTypeFoundation($value);
   if($value->blueprint()->name() == 'pages/introduction') return getJsonEncodeFromSectionTypeIntroduction($value);
   if($value->blueprint()->name() == 'pages/plan')         return getJsonEncodeFromSectionTypePlan($value);
-  if($value->blueprint()->name() == 'pages/team')         return 'team!';
+  if($value->blueprint()->name() == 'pages/team')         return getJsonEncodeFromSectionTypeTeam($value);
 
   return 'default';
 });

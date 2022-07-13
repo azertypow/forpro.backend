@@ -20,7 +20,7 @@ fields:
   link:
     label: Lien
     type: url
-  photo:
+  cover:
     label: Photo
     type: files
     query: page.images
