@@ -1,3 +1,6 @@
+options:
+  changeTitle: false
+
 sections:
   draft:
     label: Non-publié.s
