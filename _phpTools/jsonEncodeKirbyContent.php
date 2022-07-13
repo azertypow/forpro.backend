@@ -19,7 +19,7 @@ function getJsonEncodeFromSectionTypeTeam(Page $page): array
         'status'=> $page->status(),
         'type'  => 'team',
         'title' => $page->title()->value(),
-        'text'      => $page->text()->value(),
+        'text'      => $page->text()->kirbyText()->value(),
         'team'      => $page->team()->toStructure()->map(
             fn($teamMemberItem) => getTeamItemStructure($teamMemberItem)
         )->data(),
