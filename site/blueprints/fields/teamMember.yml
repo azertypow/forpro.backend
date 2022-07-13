@@ -1,4 +1,4 @@
-title: partners
+title: team
 
 type: structure
 
@@ -14,11 +14,14 @@ fields:
   name:
     label: Nom
     type: text
+  topic:
+    label: thématique
+    type: text
   link:
     label: Lien
     type: url
-  logo:
-    label: Logo
+  photo:
+    label: Photo
     type: files
     query: page.images
     multiple: false

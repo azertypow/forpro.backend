@@ -7,7 +7,7 @@ sections:
     size: tiny
     image: false
     template:
-      - contact
+      - team
       - evolution
       - foundation
       - introduction

@@ -1,0 +1,30 @@
+title: partners
+
+type: structure
+
+
+columns:
+  name:
+    width: 3/5
+  link:
+    width: 1/5
+  logo:
+    width: 1/10
+fields:
+  name:
+    label: Nom
+    type: text
+  topic:
+    label: thématique
+    type: text
+  link:
+    label: Lien
+    type: url
+  text:
+    label: Texte de description
+    type: writer
+    nodes:
+      - heading: false
+      - paragraph: false
+      - bulletList: false
+      - orderedList: false

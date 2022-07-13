@@ -1,4 +1,4 @@
-title: Contacte
+title: équipe
 
 status:
   draft: Brouillon
@@ -9,6 +9,9 @@ fields:
     label: Texte
     type: textarea
     placeholder: Texte de description de la section
+  team:
+    label: L'équipe
+    extends: fields/teamMember
   partners:
     label: Partenaire(s)
-    extends: fields/contact
+    extends: fields/partners
