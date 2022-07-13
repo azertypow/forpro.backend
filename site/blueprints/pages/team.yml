@@ -5,13 +5,13 @@ status:
   listed: Public
 
 fields:
-  text:
-    label: Texte
-    type: textarea
-    placeholder: Texte de description de la section
   team:
     label: L'équipe
     extends: fields/teamMember
+  text:
+    label: Texte
+    type: textarea
+    placeholder: Texte de description pour les Partenaire
   partners:
     label: Partenaire(s)
     extends: fields/partners
