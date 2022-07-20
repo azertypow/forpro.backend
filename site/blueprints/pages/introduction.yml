@@ -21,8 +21,11 @@ fields:
   articles:
     label: Articles
     type: structure
+    columns:
+      cover:
+        width: 1/1
     fields:
-      image:
+      cover:
         label: image
         type: files
         query: page.images
@@ -33,5 +36,10 @@ fields:
         fields:
           text:
             label: texte
-            type: text
+            type: writer
+            nodes:
+              - heading: false
+              - paragraph: false
+              - bulletList: false
+              - orderedList: false
 

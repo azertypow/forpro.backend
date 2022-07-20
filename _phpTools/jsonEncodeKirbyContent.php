@@ -38,6 +38,14 @@ function getJsonEncodeFromSectionTypeIntroduction(Page $page): array
         'title' => $page->title()->value(),
         'cover' => getImageArrayDataInPage($page),
         'text'  => $page->text()->value(),
+        'articles' => $page->articles()->toStructure()->map(function($articleItem) {
+            return [
+                'image' => getImageArrayDataInPage( $articleItem ),
+                'items' => $articleItem->items()->toStructure()->map(function ($textArticleItem) {
+                    return $textArticleItem->text()->value();
+                })->data(),
+            ];
+        })->data(),
     ];
 }
 
