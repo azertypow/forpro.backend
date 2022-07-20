@@ -5,9 +5,6 @@ status:
   listed: Public
 
 fields:
-  team:
-    label: L'équipe
-    extends: fields/teamMember
   text:
     label: Texte
     type: textarea

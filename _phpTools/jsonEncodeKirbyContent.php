@@ -27,10 +27,7 @@ function getJsonEncodeFromSectionTypeTeam(Page $page): array
         'type'  => 'team',
         'title' => $page->title()->value(),
         'text'      => $page->text()->kirbyText()->value(),
-        'team'      => $page->team()->toStructure()->map(
-            fn($teamMemberItem) => getTeamItemStructure($teamMemberItem)
-        )->data(),
-        'partners'  => $page->team()->toStructure()->map(
+        'partners'  => $page->partners()->toStructure()->map(
             fn($partnersItem) => getPartenersStructure($partnersItem)
         )->data(),
     ];
@@ -64,6 +61,9 @@ function getJsonEncodeFromSectionTypeFoundation(Page $page): array
         'title' => $page->title()->value(),
         'cover' => getImageArrayDataInPage($page),
         'text'  => $page->text()->kirbytext()->value(),
+        'team'      => $page->team()->toStructure()->map(
+            fn($teamMemberItem) => getTeamItemStructure($teamMemberItem)
+        )->data(),
     ];
 }
 

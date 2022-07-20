@@ -13,3 +13,6 @@ fields:
   text:
     label: Texte
     type: textarea
+  team:
+    label: L'équipe
+    extends: fields/teamMember
