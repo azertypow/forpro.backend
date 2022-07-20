@@ -18,3 +18,20 @@ fields:
       - paragraph: false
       - bulletList: false
       - orderedList: false
+  articles:
+    label: Articles
+    type: structure
+    fields:
+      image:
+        label: image
+        type: files
+        query: page.images
+        multiple: false
+      items:
+        label: point
+        type: structure
+        fields:
+          text:
+            label: texte
+            type: text
+
