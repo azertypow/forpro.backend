@@ -5,11 +5,6 @@ status:
   listed: Public
 
 fields:
-  cover:
-    label: Image de couverture
-    type: files
-    query: page.images
-    multiple: false
   text:
     label: Description
     type: writer
