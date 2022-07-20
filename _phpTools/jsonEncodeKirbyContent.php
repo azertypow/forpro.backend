@@ -10,6 +10,13 @@ function getJsonEncodeFromSectionTypePlan(Page $page): array
         'type'  => 'plan',
         'title' => $page->title()->value(),
         'text'  => $page->text()->value(),
+        'zoneReception'       => $page->zoneReception()->value(),
+        'zoneLearningLab'     => $page->zoneLearningLab()->value(),
+        'zoneMakerLab'        => $page->zoneMakerLab()->value(),
+        'zoneFoodLab'         => $page->zoneFoodLab()->value(),
+        'zoneSchool'          => $page->zoneSchool()->value(),
+        'zoneNursery'         => $page->zoneNursery()->value(),
+        'zoneEntreprises'     => $page->zoneEntreprises()->value(),
     ];
 }
 
