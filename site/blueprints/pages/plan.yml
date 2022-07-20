@@ -4,12 +4,82 @@ status:
   draft: Brouillon
   listed: Public
 
-fields:
-  text:
-    label: Description
-    type: writer
-    nodes:
-      - heading: false
-      - paragraph: false
-      - bulletList: false
-      - orderedList: false
+columns:
+  - width: 1/1
+    fields:
+      text:
+        label: Description
+        type: writer
+        nodes:
+          - heading: false
+          - paragraph: false
+          - bulletList: false
+          - orderedList: false
+  - width: 1/1
+    fields:
+      zonetitle:
+        label: Description des zones
+        type: headline
+  - width: 1/3
+    fields:
+      zoneReception:
+        label: texte pour la zone "Accueil"
+        type: writer
+        nodes:
+          - heading: false
+          - paragraph: false
+          - bulletList: false
+          - orderedList: false
+      zoneLearningLab:
+        label: texte pour la zone "LearningLab"
+        type: writer
+        nodes:
+          - heading: false
+          - paragraph: false
+          - bulletList: false
+          - orderedList: false
+      zoneMakerLab:
+        label: texte pour la zone "MakerLab"
+        type: writer
+        nodes:
+          - heading: false
+          - paragraph: false
+          - bulletList: false
+          - orderedList: false
+  - width: 1/3
+    fields:
+      zoneFoodLab:
+        label: texte pour la zone "FoodLab"
+        type: writer
+        nodes:
+          - heading: false
+          - paragraph: false
+          - bulletList: false
+          - orderedList: false
+      zoneSchool:
+        label: texte pour la zone "École d’horlogerie"
+        type: writer
+        nodes:
+          - heading: false
+          - paragraph: false
+          - bulletList: false
+          - orderedList: false
+  - width: 1/3
+    fields:
+      zoneNursery:
+        label: texte pour la "Crèche"
+        type: writer
+        nodes:
+          - heading: false
+          - paragraph: false
+          - bulletList: false
+          - orderedList: false
+      zoneEntreprises:
+        label: texte pour la zone "Entreprises"
+        type: writer
+        nodes:
+          - heading: false
+          - paragraph: false
+          - bulletList: false
+          - orderedList: false
+
