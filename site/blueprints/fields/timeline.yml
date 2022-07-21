@@ -4,9 +4,9 @@ type: structure
 
 
 columns:
-  nom:
+  name:
     width: 1/5
-  categorie:
+  categories:
     width: 3/5
   date:
     width: 1/10
