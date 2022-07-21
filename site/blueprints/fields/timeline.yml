@@ -5,11 +5,11 @@ type: structure
 
 columns:
   name:
-    width: 1/5
-  categories:
     width: 3/5
+  categories:
+    width: 1/5
   date:
-    width: 1/10
+    width: 1/5
 fields:
   date:
     type: date
