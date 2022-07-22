@@ -64,6 +64,9 @@ function getJsonEncodeFromSectionTypeFoundation(Page $page): array
         'team'      => $page->team()->toStructure()->map(
             fn($teamMemberItem) => getTeamItemStructure($teamMemberItem)
         )->data(),
+        'conseil'      => $page->conseil()->toStructure()->map(
+            fn($teamMemberItem) => getPartenersStructure($teamMemberItem)
+        )->data(),
     ];
 }
 

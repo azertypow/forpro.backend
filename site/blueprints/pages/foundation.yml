@@ -16,3 +16,7 @@ fields:
   team:
     label: L'équipe
     extends: fields/teamMember
+  conseil:
+    label: Conseil de Fondation
+    extends: fields/partners
+
