@@ -2,6 +2,7 @@
 use Kirby\Cms;
 use Kirby\Cms\Page;
 use Kirby\Cms\StructureObject;
+include_once '_phpTools/string.php';
 
 function getJsonEncodeFromSectionTypePlan(Page $page): array
 {
@@ -125,7 +126,7 @@ function getTeamItemStructure(StructureObject $teamMemberItem): array {
         'topic'   => $teamMemberItem->topic()->value(),
         'link'    => $teamMemberItem->link()->value(),
         'cover'   => getImageArrayDataInPage($teamMemberItem),
-        'text'    => $teamMemberItem->text()->value(),
+        'text'    => reverseMail($teamMemberItem->text()->value()),
     ];
 }
 
@@ -134,6 +135,6 @@ function getPartenersStructure(StructureObject $teamMemberItem): array {
         'name'    => $teamMemberItem->name()->value(),
         'topic'   => $teamMemberItem->topic()->value(),
         'link'    => $teamMemberItem->link()->value(),
-        'text'    => $teamMemberItem->text()->value(),
+        'text'    => reverseMail($teamMemberItem->text()->value()),
     ];
 }
