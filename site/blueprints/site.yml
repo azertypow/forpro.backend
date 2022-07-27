@@ -54,6 +54,7 @@ columns:
             marks:
               - bold
               - link
+              - email
             nodes: false
 
   right:
@@ -65,4 +66,5 @@ columns:
         marks:
           - bold
           - link
+          - email
         nodes: false
