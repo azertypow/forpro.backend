@@ -90,3 +90,13 @@ columns:
           - link
           - email
         nodes: false
+
+  newsletter:
+    width: 1/1
+    fields:
+      newsletterCode:
+        label: Code d'Infomaniak pour le formulaire d'inscription à la newsletter
+        type: writer
+        marks: false
+        nodes: false
+        inline: true
