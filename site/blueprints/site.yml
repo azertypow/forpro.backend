@@ -3,6 +3,28 @@ options:
 
 
 columns:
+  introTitle:
+    width: 1/1
+    fields:
+      introTitleSettings:
+        label: Introduction
+        type: headline
+
+  intro:
+    width: 1/1
+    fields:
+      introText:
+        label: Texte d'introduction
+        type: writer
+        nodes:
+          - heading: false
+          - paragraph: true
+          - bulletList: false
+          - orderedList: false
+        marks:
+          - bold
+          - italic
+
   sectionTitle:
     width: 1/1
     fields:
