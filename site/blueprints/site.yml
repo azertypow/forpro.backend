@@ -96,7 +96,5 @@ columns:
     fields:
       newsletterCode:
         label: Code d'Infomaniak pour le formulaire d'inscription à la newsletter
-        type: writer
-        marks: false
-        nodes: false
-        inline: true
+        type: textarea
+        buttons: false

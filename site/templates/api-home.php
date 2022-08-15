@@ -32,9 +32,11 @@ $pagesToReturn = $sections->map(function (Cms\Page $value){
 
 echo json_encode([
   'title'       => $site->title()->value(),
+  'description' => $site->introText()->value(),
   'footer'      => [
     'left'        => $site->textLeft()->value(),
     'right'       => $site->textRight()->value(),
   ],
   'sections'    => $pagesToReturn->data(),
+  'newsletterCode' => $site->newsletterCode()->kirbytext()->value(),
 ]);
