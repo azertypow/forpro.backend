@@ -1,5 +1,6 @@
 {
   "name": "getkirby/plainkit",
+  "version": "2.0.0",
   "description": "Kirby Plainkit",
   "type": "project",
   "keywords": [
