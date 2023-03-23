@@ -6,11 +6,25 @@ return [
     'debug' => true,
     'routes' => [
         [
-            'pattern' => '/',
+            'method' => 'GET',
+            'pattern' => 'api.v2/site',
             'action'  => function () {
                 return new Page([
                     'slug'      => 'api',
-                    'template'  => "api-home",
+                    'template'  => "get.home",
+                ]);
+            }
+        ],
+        [
+            'method' => 'GET',
+            'pattern' => 'api.v2/section/(:any)',
+            'action'  => function (string $any) {
+
+//                echo "";
+
+                return new Page([
+                    'slug'      => 'api',
+                    'template'  => "get.home",
                 ]);
             }
         ],

@@ -19,49 +19,43 @@ use ReflectionFunction;
  */
 class Controller
 {
-    protected $function;
+	public function __construct(protected Closure $function)
+	{
+	}
 
-    public function __construct(Closure $function)
-    {
-        $this->function = $function;
-    }
+	public function arguments(array $data = []): array
+	{
+		$info = new ReflectionFunction($this->function);
 
-    public function arguments(array $data = []): array
-    {
-        $info = new ReflectionFunction($this->function);
-        $args = [];
+		return A::map(
+			$info->getParameters(),
+			fn ($parameter) => $data[$parameter->getName()] ?? null
+		);
+	}
 
-        foreach ($info->getParameters() as $parameter) {
-            $name = $parameter->getName();
-            $args[] = $data[$name] ?? null;
-        }
+	public function call($bind = null, $data = [])
+	{
+		$args = $this->arguments($data);
 
-        return $args;
-    }
+		if ($bind === null) {
+			return ($this->function)(...$args);
+		}
 
-    public function call($bind = null, $data = [])
-    {
-        $args = $this->arguments($data);
+		return $this->function->call($bind, ...$args);
+	}
 
-        if ($bind === null) {
-            return call_user_func($this->function, ...$args);
-        }
+	public static function load(string $file)
+	{
+		if (is_file($file) === false) {
+			return null;
+		}
 
-        return $this->function->call($bind, ...$args);
-    }
+		$function = F::load($file);
 
-    public static function load(string $file)
-    {
-        if (is_file($file) === false) {
-            return null;
-        }
+		if ($function instanceof Closure === false) {
+			return null;
+		}
 
-        $function = F::load($file);
-
-        if (is_a($function, 'Closure') === false) {
-            return null;
-        }
-
-        return new static($function);
-    }
+		return new static($function);
+	}
 }
