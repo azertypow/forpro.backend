@@ -15,7 +15,7 @@ fields:
     label: Nom
     type: text
   topic:
-    label: thématique
+    label: Statut
     type: text
   link:
     label: Lien

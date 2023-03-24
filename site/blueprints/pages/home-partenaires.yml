@@ -1,4 +1,4 @@
-title: équipe
+title: Les partenaires
 
 status:
   draft: Brouillon
@@ -8,7 +8,7 @@ fields:
   text:
     label: Texte
     type: textarea
-    placeholder: Texte de description pour les Partenaire
+    placeholder: Texte de description pour les partenaires
   partners:
     label: Partenaire(s)
     extends: fields/partners

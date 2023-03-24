@@ -1,4 +1,4 @@
-title: Fondation
+title: fondation ForPro
 
 status:
   draft: Brouillon
@@ -10,8 +10,11 @@ fields:
     type: files
     query: page.images
     multiple: false
-  text:
-    label: Texte
+  textMission:
+    label: Mission
+    type: textarea
+  textPrincipe:
+    label: Principes
     type: textarea
   team:
     label: L'équipe

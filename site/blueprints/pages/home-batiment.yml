@@ -1,0 +1,49 @@
+title: Batiment
+
+status:
+  draft: Brouillon
+  listed: Public
+
+columns:
+  - width: 1/3
+    fields:
+      cover:
+        label: Image de couverture
+        type: files
+        query: page.images
+        multiple: false
+
+  - width: 2/3
+    fields:
+      text:
+        label: Description générale
+        type: writer
+        nodes:
+          - heading: false
+          - paragraph: false
+          - bulletList: false
+          - orderedList: false
+
+
+
+
+  - width: 1/1
+    fields:
+      pageTitle:
+        label: Zones du bâtiment
+        type: headline
+
+  - width: 1/3
+    sections:
+      drafts:
+        label: Brouillon
+        type: pages
+        status: draft
+        templates: home-batiment-zone
+  - width: 2/3
+    sections:
+      published:
+        label: Public
+        type: pages
+        status: listed
+        templates: home-batiment-zone
