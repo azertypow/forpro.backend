@@ -10,5 +10,5 @@ fields:
     type: textarea
     placeholder: Texte de description pour les partenaires
   partners:
-    label: Partenaire(s)
+    label: Partenaires
     extends: fields/partners
