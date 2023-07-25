@@ -1,3 +1,5 @@
+blueprint: user
+
 title: Admin
 description: Super admin. Modification du contenu et modification des status et ajout de pages
 

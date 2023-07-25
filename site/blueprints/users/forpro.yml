@@ -1,3 +1,5 @@
+blueprint: user
+
 title: Forpro
 description: Administration global. Accès au contenu de l'ensemble du site. Modification du contenu et modification des status.
 

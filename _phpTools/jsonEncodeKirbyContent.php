@@ -89,7 +89,7 @@ function getJsonEncodeFromSectionTypeEvolution(Page $page): array
 
 function getImageArrayDataInPage(Page|StructureObject $page): ?array
 {
-    return count($page->cover()->toFiles()->toArray()) > 0 ? $page->cover()->toFiles()->map(
+    return count($page->coverImage()->toFiles()->toArray()) > 0 ? $page->coverImage()->toFiles()->map(
         fn($file) => getJsonEncodeImageData($file)
     )->data() : null;
 }
@@ -106,6 +106,7 @@ function getJsonEncodeImageData(Cms\File $file): array
             'small'     => $file->resize(500)->url(),
             'reg'       => $file->resize(1280)->url(),
             'large'     => $file->resize(1920)->url(),
+            'xxl'       => $file->resize(2500)->url(),
         ]
     ];
 }

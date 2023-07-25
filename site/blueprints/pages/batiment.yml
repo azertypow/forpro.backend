@@ -1,0 +1,32 @@
+blueprint: page
+
+title: Batiment
+
+status:
+  draft: Brouillon
+  listed: Public
+
+num: zero
+
+columns:
+
+  - width: 1/1
+    fields:
+      pageTitle:
+        label: Liste des Labs
+        type: headline
+
+  - width: 1/3
+    sections:
+      drafts:
+        label: Brouillon
+        type: pages
+        status: draft
+        templates: batiment.lab
+  - width: 2/3
+    sections:
+      published:
+        label: Public
+        type: pages
+        status: listed
+        templates: batiment.lab

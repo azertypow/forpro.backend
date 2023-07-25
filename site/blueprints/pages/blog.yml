@@ -1,0 +1,45 @@
+blueprint: page
+
+title: Blog
+icon: 📚
+num: zero
+
+options:
+  changeSlug: false
+  delete: false
+  changeTemplate: false
+  changeStatus: false
+  duplicate: false
+  sort: false
+
+
+columns:
+  top:
+    width: 1/1
+    sections:
+      info:
+        type: info
+        label: 'Aide pour la recherche dans les articles'
+        text: |
+          - pour faire une recherche par date (date de publication/date de l'événement), utiliser le format AAAA-MM-JJ
+          - la recherche s'applique à tout le contenu des articles.
+
+  left:
+    width: 1/3
+    sections:
+      drafts:
+        extends: sections/blog.articles
+        label: Brouillon.s
+        status: draft
+      unlisted:
+        extends: sections/blog.articles
+        label: Article.s non publié.s
+        status: unlisted
+
+  right:
+    width: 2/3
+    sections:
+      listed:
+        extends: sections/blog.articles
+        label: Article.s publié.s
+        status: listed

@@ -1,0 +1,88 @@
+blueprint: page
+
+num: zero
+
+title: Home
+
+options:
+  changeTitle: false
+
+status:
+  draft: Brouillon
+  listed: Public
+
+
+columns:
+  - width: 1/1
+    fields:
+      contentTitle:
+        label: Contenu principal
+        type: headline
+
+  - width: 2/3
+    fields:
+      cover:
+        label: Image de couverture
+        type: files
+        query: page.images
+        multiple: false
+
+  - width: 2/3
+    fields:
+      textIntro:
+        required: true
+        label: Text d'introduction
+        type: writer
+        nodes: false
+        marks:
+          - italic
+          - link
+          - email
+          - underline
+
+  - width: 1/1
+    fields:
+      blockContent:
+        label: Contenu
+        type: blocks
+        fieldsets:
+          - heading
+          - text
+          - image
+          - quote
+
+
+
+  - width: 1/1
+    fields:
+      buildingDetailsTitle:
+        label: Le Lieu
+        type: headline
+  - width: 2/3
+    fields:
+      buildingDetails:
+        required: true
+        label: Texte de description
+        type: writer
+        nodes: false
+        marks:
+          - italic
+          - link
+          - email
+          - underline
+
+
+  - width: 2/3
+    fields:
+      imageFooterTitle:
+        label: Image de bas de page
+        type: headline
+
+      imageFooter:
+        label: Image
+        type: files
+        query: model.images
+        multiple: false
+        empty: field.blocks.gallery.images.empty
+        uploads:
+          template: files/image

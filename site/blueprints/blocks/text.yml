@@ -1,0 +1,18 @@
+blueprint: page
+
+preview: text
+wysiwyg: true
+icon: text
+fields:
+  text:
+    type: writer
+    placeholder: field.blocks.text.placeholder
+    nodes:
+      - bulletList
+      - paragraph
+      - heading
+    marks:
+      - italic
+      - link
+      - email
+      - underline

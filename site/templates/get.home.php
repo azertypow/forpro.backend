@@ -3,7 +3,6 @@
 header("Access-Control-Allow-Origin: *");
 
 use Kirby\Cms;
-include_once '_phpTools/jsonEncodeKirbyContent.php';
 
 /**
  * @var Cms\Page  $page
@@ -17,17 +16,24 @@ include_once '_phpTools/jsonEncodeKirbyContent.php';
 //echo "</pre>";
 
 /** @var Cms\Pages $sections */
-$sections = $site->childrenAndDrafts();
+$findSectionListedPage = $site->find('sections');
+
+if( $findSectionListedPage->first() == null ) {
+  echo json_encode([
+    'errors' => ['can\'t find page "/sections/"'],
+  ]);
+  die();
+}
+
+$sections = $findSectionListedPage->childrenAndDrafts();
 
 $pagesToReturn = $sections->map(function (Cms\Page $value){
-
-  if($value->blueprint()->name() == 'pages/evolution')    return getJsonEncodeFromSectionTypeEvolution($value);
-  if($value->blueprint()->name() == 'pages/foundation')   return getJsonEncodeFromSectionTypeFoundation($value);
-  if($value->blueprint()->name() == 'pages/introduction') return getJsonEncodeFromSectionTypeIntroduction($value);
-  if($value->blueprint()->name() == 'pages/plan')         return getJsonEncodeFromSectionTypePlan($value);
-  if($value->blueprint()->name() == 'pages/team')         return getJsonEncodeFromSectionTypeTeam($value);
-
-  return 'default';
+  return [
+    'title'       => $value->title(),
+    'url'         => $value->url(),
+    'slug'        => $value->slug(),
+    'blueprint'   => $value->blueprint()->name(),
+  ];
 });
 
 echo json_encode([
@@ -37,6 +43,9 @@ echo json_encode([
     'left'        => $site->textLeft()->value(),
     'right'       => $site->textRight()->value(),
   ],
-  'sections'    => $pagesToReturn->data(),
+  'blogDetails' => [
+    'title' => $site->find('blog')->title(),
+  ],
+  'sectionsDetails'    => $pagesToReturn->data(),
   'newsletterCode' => $site->newsletterCode()->kirbytext()->value(),
 ]);

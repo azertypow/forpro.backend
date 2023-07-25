@@ -1,0 +1,23 @@
+
+fields:
+  images:
+    label: field.blocks.gallery.images.label
+    type: files
+    query: model.images
+    multiple: true
+    layout: cards
+    size: tiny
+    empty: field.blocks.gallery.images.empty
+    uploads:
+      template: blocks/image
+    image:
+      ratio: auto
+  caption:
+    label: field.blocks.image.caption
+    type: writer
+    icon: text
+    inline: true
+  isFixed:
+    label: fixe au scroll
+    type: toggle
+    width: 1/2

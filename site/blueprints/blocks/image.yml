@@ -1,0 +1,33 @@
+blueprint: page
+
+name: field.blocks.image.name
+icon: image
+preview: image
+fields:
+  image:
+    label: field.blocks.image.name
+    type: files
+    query: model.images
+    multiple: false
+    uploads:
+      template: blocks/image
+  title:
+    label: Titre
+    type: text
+  isFixed:
+    label: fixe au scroll
+    type: toggle
+    width: 1/2
+  photographer:
+    label: Photographer
+    type: text
+  license:
+    label: License
+    type: select
+    options:
+      - Unsplash
+      - CC BY 4.0
+      - CC BY-SA 4.0
+      - CC BY-NC 4.0
+      - CC BY-ND 4.0
+

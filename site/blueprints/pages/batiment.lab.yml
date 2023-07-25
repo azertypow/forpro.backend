@@ -1,0 +1,62 @@
+blueprint: page
+
+title: Batiment / Zones
+
+status:
+  draft: Brouillon
+  listed: Public
+
+columns:
+  - width: 2/3
+    fields:
+      coverImage:
+        label: Image de couverture
+        type: files
+        query: page.images
+        multiple: false
+
+  - width: 2/3
+    fields:
+      textIntro:
+        required: true
+        label: Text d'introduction
+        type: writer
+        nodes: false
+        marks:
+          - italic
+          - link
+          - email
+          - underline
+
+
+
+
+
+  - width: 1/1
+    fields:
+      blockContent:
+        label: Contenu
+        type: blocks
+        fieldsets:
+          - heading
+          - text
+          - image
+          - quote
+
+  - width: 1/1
+    fields:
+      faqTitle:
+        label: Option du F.A.Q.
+        type: headline
+  - width: 2/3
+    fields:
+      faqOption:
+        label: Lien avec le F.A.Q.
+        type: select
+        options:
+          tag1: LearningLab
+          tag2: MakerLab
+          tag3: GrandLab
+          tag4: Accueil
+          tag5: FoodLab
+          tag6: Hôtel Entreprises

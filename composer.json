@@ -23,14 +23,14 @@
     "source": "https://github.com/getkirby/starterkit"
   },
   "require": {
-    "php": ">=8.0.0 <= 8.2.4",
+    "php": ">=8.0.0 <= 8.2.6",
     "getkirby/cms": "^3.6",
     "ext-json": "*"
   },
   "scripts": {
     "start": [
       "Composer\\Config::disableProcessTimeout",
-      "@php -S localhost:8000 kirby/router.php"
+      "@php -c ./php.ini -S localhost:8000 kirby/router.php"
     ]
   },
   "config": {
