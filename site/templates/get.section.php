@@ -31,6 +31,7 @@ echo json_encode([
   'title' => $page->title()->value(),
 
   'coverImage' => getImageArrayDataInPage($page),
+  'themeColor' => $page->themeColor()->value(),
   'textIntro' => $page->textIntro()->value(),
   'content' => $page->blockContent()->toBlocks()->map(function (Cms\Block $blockItem) {
     return $blockItem->type() != 'image' ?

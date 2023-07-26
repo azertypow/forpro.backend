@@ -15,6 +15,22 @@ columns:
         query: page.images
         multiple: false
 
+  - width: 1/3
+    fields:
+      themeColor:
+        label: Theme de la page
+        type: select
+        required: true
+        options:
+          - brown_purple_red
+          - sky_blue_orange
+          - green_pink_blue
+          - brown_yellow_purple
+          - white_pink_blue
+          - orange_green_pink
+          - purple_white_blue
+
+
   - width: 2/3
     fields:
       textIntro:
