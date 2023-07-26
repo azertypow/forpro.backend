@@ -43,7 +43,7 @@ echo json_encode([
   'blockContent'        =>  $page->blockContent()->toBlocks()->map(function (Cms\Block $blockItem) {
     return $blockItem->type() != 'image' ?
       [
-        'html'      => $blockItem->toArray(),
+        'html'      => $blockItem->toHtml(),
         'type'      => $blockItem->type(),
         'isHidden'  => $blockItem->isHidden(),
       ]
