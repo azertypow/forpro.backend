@@ -1,5 +1,7 @@
 <?php
 
+require_once './_phpTools/jsonEncodeKirbyContent.php';
+
 header("Access-Control-Allow-Origin: *");
 
 use Kirby\Cms;
@@ -22,7 +24,7 @@ $pagesToReturn = $articles->map(function (Cms\Page $value){
     'url'         => $value->url(),
     'slug'        => $value->slug(),
     'blueprint'   => $value->blueprint()->name(),
-    'coverImage'      => $value->coverImage(),
+    'coverImage'      => getJsonEncodeImageData($value->coverImage()->toFile()),
     'typeOfContent'   => $value->typeOfContent(),
     'textIntro'       => $value->textIntro()->text(),
     'eventDate'       => $value->typeOfContent() == 'event' ? $value->eventDate() : null,

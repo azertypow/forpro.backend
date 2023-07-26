@@ -24,6 +24,7 @@ columns:
         type: files
         query: page.images
         multiple: false
+        required: true
       textIntro:
         required: true
         label: Text d'introduction
