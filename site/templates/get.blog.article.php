@@ -62,7 +62,7 @@ echo json_encode([
         'isHidden'  => $blockItem->isHidden(),
       ];
   })->data(),
-  'eventDate'           =>  $page->eventDate(),
+  'eventDate'           =>  $page->typeOfContent() == 'event' ? $page->eventDate() : null,
   'publicationDate'     =>  $page->publicationDate(),
   'author'              =>  $page->author()->toUser()->username(),
 ]);
