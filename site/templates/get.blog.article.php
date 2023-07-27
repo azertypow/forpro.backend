@@ -30,14 +30,14 @@ if($page->blueprint()->name() != 'pages/blog.article') {
 
 
 echo json_encode([
-  'title' => $page->title()->value(),
+  'title' => $page->title(),
 
   'url'                 => $page->url(),
   'slug'                => $page->slug(),
   'blueprint'           => $page->blueprint()->name(),
   'textIntro'           => $page->textIntro()->text(),
 
-  'coverImage'          =>  getImageArrayDataInPage($page),
+  'coverImage'          =>  getJsonEncodeImageData($page->coverImage()->toFile()),
   'typeOfContent'       =>  $page->typeOfContent(),
 //  todo: clean code repeat
   'blockContent'        =>  $page->blockContent()->toBlocks()->map(function (Cms\Block $blockItem) {
