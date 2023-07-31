@@ -1,7 +1,7 @@
 blueprint: page
 
 title: Article
-num: '{{ page.date.toDate("Ymd") }}'
+num: '{{ page.publicationDate.toDate("Ymd") }}'
 icon: 📖
 
 status:
