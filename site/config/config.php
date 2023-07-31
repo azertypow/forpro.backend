@@ -55,7 +55,7 @@ return [
         ],
         [
             'method' => 'GET',
-            'pattern' => 'api-v2/blog/(:any)',
+            'pattern' => 'api-v2/blog/article/(:any)',
             'action'  => function (string $articleSlug) {
                 return new Page([
                     'slug' => "blog/$articleSlug",
