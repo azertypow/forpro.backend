@@ -1,7 +1,7 @@
 type: pages
 label: Articles
 text: "<span style='color: grey;'>{{page.typeOfContent.value}}</span> | {{ page.title }}"
-info: "créé le {{ page.publicationDate.toDate('Y-m-d') }}"
+info: "publication le {{ page.publicationDate.toDate('Y-m-d') }}"
 template: blog.article
 empty: Pas d'articles encore
 sortBy: date desc
