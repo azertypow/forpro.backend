@@ -139,3 +139,24 @@ function getPartenersStructure(StructureObject $teamMemberItem): array {
         'text'    => reverseMail($teamMemberItem->text()->value()),
     ];
 }
+
+function getPreviewArticleData(Cms\Page | null $value): array | null
+{
+    if(!$value) return null;
+
+    return [
+    'title'             => $value->title(),
+    'url'               => $value->url(),
+    'slug'              => $value->slug(),
+    'blueprint'         => $value->blueprint()->name(),
+    'coverImage'        => getJsonEncodeImageData($value->coverImage()->toFile()),
+    'typeOfContent'     => $value->typeOfContent(),
+    'textIntro'         => $value->textIntro()->text(),
+    'eventDate'         => $value->typeOfContent() == 'event' ? $value->eventDate() : null,
+    'publicationDate'   => $value->publicationDate(),
+    ];
+}
+
+function getNewsByTypeOfContent(Cms\Page $blog, string $typeOfContent): \Kirby\Toolkit\Collection {
+    return $blog->children()->filterBy(fn($child) => $child->typeOfContent() == $typeOfContent);
+}

@@ -45,6 +45,16 @@ return [
         ],
         [
             'method' => 'GET',
+            'pattern' => 'api-v2/blog/last',
+            'action'  => function () {
+                return new Page([
+                    'slug' => "blog",
+                    'template' => "get.blog.last",
+                ]);
+            }
+        ],
+        [
+            'method' => 'GET',
             'pattern' => 'api-v2/blog/(:any)',
             'action'  => function (string $articleSlug) {
                 return new Page([
