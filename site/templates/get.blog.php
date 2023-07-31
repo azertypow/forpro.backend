@@ -20,15 +20,15 @@ $articles = $blog->children();
 
 $pagesToReturn = $articles->map(function (Cms\Page $value){
   return [
-    'title'       => $value->title(),
-    'url'         => $value->url(),
-    'slug'        => $value->slug(),
-    'blueprint'   => $value->blueprint()->name(),
-    'coverImage'      => getJsonEncodeImageData($value->coverImage()->toFile()),
-    'typeOfContent'   => $value->typeOfContent(),
-    'textIntro'       => $value->textIntro()->text(),
-    'eventDate'       => $value->typeOfContent() == 'event' ? $value->eventDate() : null,
-    'publicationDate' => $value->publicationDate(),
+    'title'             => $value->title(),
+    'url'               => $value->url(),
+    'slug'              => $value->slug(),
+    'blueprint'         => $value->blueprint()->name(),
+    'coverImage'        => getJsonEncodeImageData($value->coverImage()->toFile()),
+    'typeOfContent'     => $value->typeOfContent(),
+    'textIntro'         => $value->textIntro()->text(),
+    'eventDate'         => $value->typeOfContent() == 'event' ? $value->eventDate() : null,
+    'publicationDate'   => $value->publicationDate(),
   ];
 });
 
