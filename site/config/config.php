@@ -15,11 +15,11 @@ return [
         ],
         [
             'method' => 'GET',
-            'pattern' => 'api-v2/site',
+            'pattern' => 'api-v2/site-informations',
             'action'  => function () {
                 return new Page([
-                    'slug'      => 'api',
-                    'template'  => "get.home",
+                    'slug'      => 'site-information',
+                    'template'  => "get.siteInformations",
                 ]);
             }
         ],
@@ -48,7 +48,7 @@ return [
             'pattern' => 'api-v2/blog/last',
             'action'  => function () {
                 return new Page([
-                    'slug' => "blog",
+                    'slug' => "blog/last",
                     'template' => "get.blog.last",
                 ]);
             }
@@ -58,7 +58,7 @@ return [
             'pattern' => 'api-v2/blog/article/(:any)',
             'action'  => function (string $articleSlug) {
                 return new Page([
-                    'slug' => "blog/$articleSlug",
+                    'slug' => "blog/article/$articleSlug",
                     'template' => "get.blog.article",
                 ]);
             }
