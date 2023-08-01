@@ -170,16 +170,20 @@ function getDefaultBlogContent (Cms\Block $blockItem): array {
         ]
         :
         [
-            'data'     => [
-                'title'         => $blockItem->title()->value(),
-                'isfixed'       => $blockItem->isfixed()->value() == 'true',
-                'photographer'  => $blockItem->photographer()->value(),
-                'license'       => $blockItem->license()->value(),
-                'image'         => ($blockItem->image()->toFile() instanceof Kirby\Cms\File)
-                    ? getJsonEncodeImageData($blockItem->image()->toFile())
-                    : null,
-            ],
+            'data'     => getBlogContentImageType($blockItem),
             'type'      => 'image',
             'isHidden'  => $blockItem->isHidden(),
         ];
+}
+
+function getBlogContentImageType(CMS\Block $blockItem): array {
+    return [
+        'title'         => $blockItem->title()->value(),
+        'isfixed'       => $blockItem->isfixed()->value() == 'true',
+        'photographer'  => $blockItem->photographer()->value(),
+        'license'       => $blockItem->license()->value(),
+        'image'         => ($blockItem->image()->toFile() instanceof Kirby\Cms\File)
+            ? getJsonEncodeImageData($blockItem->image()->toFile())
+            : null,
+    ];
 }

@@ -21,11 +21,12 @@ columns:
 
   - width: 2/3
     fields:
-      cover:
+      coverImage:
         label: Image de couverture
         type: files
         query: page.images
         multiple: false
+        required: true
 
   - width: 2/3
     fields:
@@ -85,4 +86,4 @@ columns:
         multiple: false
         empty: field.blocks.gallery.images.empty
         uploads:
-          template: files/image
+          template: image

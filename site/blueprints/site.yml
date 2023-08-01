@@ -15,7 +15,7 @@ columns:
           cover: true
         status: listed
         template:
-          - home.site_description
+          - home
         layout: cards
         size: medium
         text: ""
