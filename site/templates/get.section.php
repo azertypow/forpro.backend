@@ -30,32 +30,11 @@ if($page->blueprint()->name() != 'pages/batiment.lab') {
 echo json_encode([
   'title' => $page->title()->value(),
 
-  'coverImage' => getImageArrayDataInPage($page),
-  'themeColor' => $page->themeColor()->value(),
-  'textIntro' => $page->textIntro()->value(),
-  'content' => $page->blockContent()->toBlocks()->map(function (Cms\Block $blockItem) {
-    return $blockItem->type() != 'image' ?
-      [
-        'html'      => $blockItem->toHtml(),
-        'type'      => $blockItem->type(),
-        'isHidden'  => $blockItem->isHidden(),
-      ]
-      :
-      [
-        'data'     => [
-          'title'         => $blockItem->title()->value(),
-          'isfixed'       => $blockItem->isfixed()->value() == 'true',
-          'photographer'  => $blockItem->photographer()->value(),
-          'license'       => $blockItem->license()->value(),
-          'image'         => ($blockItem->image()->toFile() instanceof Kirby\Cms\File)
-                              ? getJsonEncodeImageData($blockItem->image()->toFile())
-                              : null,
-        ],
-        'type'      => 'image',
-        'isHidden'  => $blockItem->isHidden(),
-      ];
-  })->data(),
-  'faqTitle' => $page->faqTitle()->value(),
-  'faqOption' => $page->faqOption()->value(),
+  'coverImage'  => getImageArrayDataInPage($page),
+  'themeColor'  => $page->themeColor()->value(),
+  'textIntro'   => $page->textIntro()->value(),
+  'content'     => $page->blockContent()->toBlocks()->map(fn(Cms\Block $blockItem) => getDefaultBlogContent($blockItem))->data(),
+  'faqTitle'    => $page->faqTitle()->value(),
+  'faqOption'   => $page->faqOption()->value(),
 
 ]);
