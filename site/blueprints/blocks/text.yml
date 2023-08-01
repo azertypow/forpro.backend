@@ -10,7 +10,7 @@ fields:
     nodes:
       - bulletList
       - paragraph
-      - heading
+#      - heading
     marks:
       - italic
       - link
