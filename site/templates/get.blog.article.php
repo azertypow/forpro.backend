@@ -19,6 +19,16 @@ $slugFromApiRequest = $page->slug();
 /** @var Cms\Page $page */
 $page = $site->find( $slugFromApiRequest );
 
+if($page == null) {
+  // todo: clean error repeat code
+  echo json_encode(
+    [
+      'errors' => [$slugFromApiRequest.' page does not exist'],
+    ]
+  );
+  die();
+}
+
 if($page->blueprint()->name() != 'pages/blog.article') {
   echo json_encode(
     [
