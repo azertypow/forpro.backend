@@ -25,6 +25,16 @@ return [
         ],
         [
             'method' => 'GET',
+            'pattern' => 'api-v2/home',
+            'action'  => function () {
+                return new Page([
+                    'slug'      => 'home',
+                    'template'  => "get.home",
+                ]);
+            }
+        ],
+        [
+            'method' => 'GET',
             'pattern' => 'api-v2/sections/(:any)',
             'action'  => function (string $sectionSlug) {
                 return new Page([
