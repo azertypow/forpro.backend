@@ -58,7 +58,7 @@ return [
             'pattern' => 'api-v2/blog/article/(:any)',
             'action'  => function (string $articleSlug) {
                 return new Page([
-                    'slug' => "blog/article/$articleSlug",
+                    'slug' => "blog/$articleSlug",
                     'template' => "get.blog.article",
                 ]);
             }
