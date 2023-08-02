@@ -176,7 +176,8 @@ function getDefaultBlogContent (Cms\Block $blockItem): array {
         ];
 }
 
-function getBlogContentImageType(CMS\Block $blockItem): array {
+function getBlogContentImageType(CMS\Block | Kirby\Cms\File $blockItem): array {
+
     return [
         'title'         => $blockItem->title()->value(),
         'isfixed'       => $blockItem->isfixed()->value() == 'true',
