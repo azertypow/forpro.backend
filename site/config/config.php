@@ -19,7 +19,7 @@ return [
             'action'  => function () {
                 return new Page([
                     'slug'      => 'site-information',
-                    'template'  => "get.siteInformations",
+                    'template'  => 'get.site_informations',
                 ]);
             }
         ],
@@ -29,7 +29,7 @@ return [
             'action'  => function () {
                 return new Page([
                     'slug'      => 'home',
-                    'template'  => "get.home",
+                    'template'  => 'get.home',
                 ]);
             }
         ],
@@ -39,7 +39,7 @@ return [
             'action'  => function (string $sectionSlug) {
                 return new Page([
                     'slug' => "sections/$sectionSlug",
-                    'template' => "get.section",
+                    'template' => 'get.section',
                 ]);
             }
         ],
@@ -49,7 +49,7 @@ return [
             'action'  => function () {
                 return new Page([
                     'slug' => "blog",
-                    'template' => "get.blog",
+                    'template' => 'get.blog',
                 ]);
             }
         ],
@@ -58,8 +58,8 @@ return [
             'pattern' => 'api-v2/blog/last',
             'action'  => function () {
                 return new Page([
-                    'slug' => "blog/last",
-                    'template' => "get.blog.last",
+                    'slug' => 'blog/last',
+                    'template' => 'get.blog.last',
                 ]);
             }
         ],
@@ -69,7 +69,7 @@ return [
             'action'  => function (string $articleSlug) {
                 return new Page([
                     'slug' => "blog/$articleSlug",
-                    'template' => "get.blog.article",
+                    'template' => 'get.blog.article',
                 ]);
             }
         ],
