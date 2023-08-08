@@ -13,6 +13,10 @@ options:
   sort: false
 
 
+status:
+  draft: Brouillon
+  listed: Public
+
 columns:
   top:
     width: 1/1
