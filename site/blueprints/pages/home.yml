@@ -3,6 +3,10 @@ blueprint: page
 num: zero
 
 title: Home
+image:
+  back: black
+  query: page.coverImage.toFile()
+  icon: 📝
 
 options:
   changeTitle: false
