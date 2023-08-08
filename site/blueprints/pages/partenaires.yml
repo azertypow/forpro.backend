@@ -33,10 +33,7 @@ columns:
         multiple: false
         required: true
 
-#status:
-#  draft: Brouillon
-#  listed: Public
-  - width: 2/3
+  - width: 3/4
     fields:
       textIntro:
         required: true
