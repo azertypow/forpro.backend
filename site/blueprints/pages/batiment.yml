@@ -24,7 +24,7 @@ columns:
         type: files
         query: page.images
         multiple: false
-        required: true
+        required: false
 
   - width: 3/4
     sections:
