@@ -57,7 +57,7 @@ columns:
         headline: Les partenaires
         type: pages
         image:
-          cover: false
+          cover: true
         status: all
         template:
           - partenaires
