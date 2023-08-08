@@ -42,9 +42,9 @@ columns:
         type: pages
         image:
           cover: true
-        status: listed
+        status: all
         template:
-          - home-foundation
+          - foundation
         layout: cards
         size: medium
         text: ""
