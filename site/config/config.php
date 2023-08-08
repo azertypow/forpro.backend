@@ -43,6 +43,17 @@ return [
                 ]);
             }
         ],
+
+        [
+            'method' => 'GET',
+            'pattern' => 'api-v2/fondation',
+            'action'  => function () {
+                return new Page([
+                    'slug'      => 'fondation',
+                    'template'  => 'get.fondation',
+                ]);
+            }
+        ],
         [
             'method' => 'GET',
             'pattern' => 'api-v2/sections/(:any)',
