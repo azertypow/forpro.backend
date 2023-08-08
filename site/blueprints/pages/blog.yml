@@ -22,25 +22,26 @@ status:
   listed: Public
 
 columns:
-  top:
-    - width: 1/3
-      fields:
-        coverImage:
-          label: Image de couverture
-          info: Utilisiée seulement pour l'administration
-          type: files
-          query: page.images
-          multiple: false
-          required: false
+  cover:
+    width: 1/3
+    fields:
+      coverImage:
+        label: Image de couverture
+        info: Utilisiée seulement pour l'administration
+        type: files
+        query: page.images
+        multiple: false
+        required: false
 
-    - width: 1/1
-      sections:
-        info:
-          type: info
-          label: 'Aide pour la recherche dans les articles'
-          text: |
-            - pour faire une recherche par date (date de publication/date de l'événement), utiliser le format AAAA-MM-JJ
-            - la recherche s'applique à tout le contenu des articles.
+  top:
+    width: 1/1
+    sections:
+      info:
+        type: info
+        label: 'Aide pour la recherche dans les articles'
+        text: |
+          - pour faire une recherche par date (date de publication/date de l'événement), utiliser le format AAAA-MM-JJ
+          - la recherche s'applique à tout le contenu des articles.
 
   left:
     width: 1/3
