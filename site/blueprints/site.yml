@@ -23,7 +23,7 @@ columns:
   - width: 1/3
     sections:
       batiment:
-        headline: Le bâtiment
+        headline: Le Bâtiment
         type: pages
         image:
           cover: true
@@ -54,7 +54,7 @@ columns:
   - width: 1/3
     sections:
       partners:
-        headline: Les partenaires
+        headline: Les Partenaires
         type: pages
         image:
           cover: true
