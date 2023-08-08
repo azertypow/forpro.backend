@@ -29,7 +29,7 @@ echo json_encode([
 
 //  'coverImage'  =>  getJsonEncodeImageData($findPatnersPage->coverImage()->toFile()),
   'textIntro'     =>  $findFondationPage->textIntro()->value(),
-  'blockContent'  =>  $page->blockContent()->toBlocks()->map(fn(Cms\Block $blockItem) => getDefaultBlogContent($blockItem))->data(),
+  'blockContent'  =>  $findFondationPage->blockContent()->toBlocks()->map(fn(Cms\Block $blockItem) => getDefaultBlogContent($blockItem))->data(),
   'team'          =>  $findFondationPage->team()->toStructure()->map(
                         fn($partnersItem) => getTeamItemStructure($partnersItem)
                       )->data(),
