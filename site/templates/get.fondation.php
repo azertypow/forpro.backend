@@ -25,12 +25,15 @@ if( $findFondationPage->first() == null ) {
 
 
 echo json_encode([
-  'title'       => $findFondationPage->title()->value(),
+  'title'         =>  $findFondationPage->title()->value(),
 
-//  'coverImage'  => getJsonEncodeImageData($findPatnersPage->coverImage()->toFile()),
-  'textIntro'   => $findFondationPage->textIntro()->value(),
-
-  'partners'  => $findFondationPage->partners()->toStructure()->map(
-    fn($partnersItem) => getTeamItemStructure($partnersItem)
-  )->data(),
+//  'coverImage'  =>  getJsonEncodeImageData($findPatnersPage->coverImage()->toFile()),
+  'textIntro'     =>  $findFondationPage->textIntro()->value(),
+  'blockContent'  =>  $page->blockContent()->toBlocks()->map(fn(Cms\Block $blockItem) => getDefaultBlogContent($blockItem))->data(),
+  'team'          =>  $findFondationPage->team()->toStructure()->map(
+                        fn($partnersItem) => getTeamItemStructure($partnersItem)
+                      )->data(),
+  'conseil'       =>  $findFondationPage->conseil()->toStructure()->map(
+                        fn($partnersItem) => getTeamItemStructure($partnersItem)
+                      )->data(),
 ]);
