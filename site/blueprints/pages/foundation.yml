@@ -40,6 +40,14 @@ columns:
           - link
           - email
           - underline
+      blockContent:
+        label: Contenu
+        type: blocks
+        fieldsets:
+          - heading
+          - text
+          - image
+          - quote
       team:
         type: structure
         label: L'équipe
