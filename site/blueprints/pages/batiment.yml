@@ -8,6 +8,12 @@ status:
 
 num: zero
 
+image:
+  back: black
+  query: page.coverImage.toFile()
+  icon: 📝
+
+
 columns:
 
   - width: 1/1
