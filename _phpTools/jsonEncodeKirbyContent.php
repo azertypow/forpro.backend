@@ -29,7 +29,7 @@ function getJsonEncodeFromSectionTypeTeam(Page $page): array
         'title' => $page->title()->value(),
         'text'      => $page->text()->kirbyText()->value(),
         'partners'  => $page->partners()->toStructure()->map(
-            fn($partnersItem) => getPartenersStructure($partnersItem)
+            fn($partnersItem) => getTeamItemStructure($partnersItem)
         )->data(),
     ];
 }
@@ -66,7 +66,7 @@ function getJsonEncodeFromSectionTypeFoundation(Page $page): array
             fn($teamMemberItem) => getTeamItemStructure($teamMemberItem)
         )->data(),
         'conseil'      => $page->conseil()->toStructure()->map(
-            fn($teamMemberItem) => getPartenersStructure($teamMemberItem)
+            fn($teamMemberItem) => getTeamItemStructure($teamMemberItem)
         )->data(),
     ];
 }
@@ -127,15 +127,6 @@ function getTeamItemStructure(StructureObject $teamMemberItem): array {
         'topic'   => $teamMemberItem->topic()->value(),
         'link'    => $teamMemberItem->link()->value(),
         'cover'   => getImageArrayDataInPage($teamMemberItem),
-        'text'    => reverseMail($teamMemberItem->text()->value()),
-    ];
-}
-
-function getPartenersStructure(StructureObject $teamMemberItem): array {
-    return [
-        'name'    => $teamMemberItem->name()->value(),
-        'topic'   => $teamMemberItem->topic()->value(),
-        'link'    => $teamMemberItem->link()->value(),
         'text'    => reverseMail($teamMemberItem->text()->value()),
     ];
 }

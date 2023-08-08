@@ -1,0 +1,33 @@
+blueprint: page
+
+title: Les partenaires
+
+options:
+  changeSlug: false
+  delete: false
+  changeTemplate: false
+  changeStatus: false
+  duplicate: false
+  sort: false
+
+
+status:
+  draft: Brouillon
+  listed: Public
+
+fields:
+  textIntro:
+    required: true
+    label: Text d'introduction
+    type: writer
+    nodes: false
+    marks:
+      - italic
+      - link
+      - email
+      - underline
+  partners:
+    type: structure
+    label: Partenaires
+    extends: fields/teamMember
+    sortBy: name

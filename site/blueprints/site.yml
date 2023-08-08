@@ -57,10 +57,10 @@ columns:
         headline: Les partenaires
         type: pages
         image:
-          cover: true
-        status: listed
+          cover: false
+        status: all
         template:
-          - home-partenaires
+          - partenaires
         layout: cards
         size: medium
         text: ""

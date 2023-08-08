@@ -20,7 +20,7 @@ fields:
   link:
     label: Lien
     type: url
-  cover:
+  coverImage:
     label: Photo
     type: files
     query: page.images
@@ -28,8 +28,9 @@ fields:
   text:
     label: Texte de description
     type: writer
-    nodes:
-      - heading: false
-      - paragraph: false
-      - bulletList: false
-      - orderedList: false
+    nodes: false
+    marks:
+      - italic
+      - link
+      - email
+      - underline

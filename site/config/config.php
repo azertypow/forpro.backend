@@ -35,6 +35,16 @@ return [
         ],
         [
             'method' => 'GET',
+            'pattern' => 'api-v2/partenaires',
+            'action'  => function () {
+                return new Page([
+                    'slug'      => 'partners',
+                    'template'  => 'get.partners',
+                ]);
+            }
+        ],
+        [
+            'method' => 'GET',
             'pattern' => 'api-v2/sections/(:any)',
             'action'  => function (string $sectionSlug) {
                 return new Page([
