@@ -2,6 +2,11 @@ blueprint: page
 
 title: Les partenaires
 
+image:
+  back: black
+  query: page.coverImage.toFile()
+  icon: 📝
+
 options:
   changeSlug: false
   delete: false
@@ -11,23 +16,40 @@ options:
   sort: false
 
 
-status:
-  draft: Brouillon
-  listed: Public
+columns:
 
-fields:
-  textIntro:
-    required: true
-    label: Text d'introduction
-    type: writer
-    nodes: false
-    marks:
-      - italic
-      - link
-      - email
-      - underline
-  partners:
-    type: structure
-    label: Partenaires
-    extends: fields/teamMember
-    sortBy: name
+  - width: 1/1
+    fields:
+      pageTitle:
+        label: Liste des Labs
+        type: headline
+
+  - width: 1/3
+    fields:
+      coverImage:
+        label: Image de couverture
+        type: files
+        query: page.images
+        multiple: false
+        required: true
+
+#status:
+#  draft: Brouillon
+#  listed: Public
+  - width: 2/3
+    fields:
+      textIntro:
+        required: true
+        label: Text d'introduction
+        type: writer
+        nodes: false
+        marks:
+          - italic
+          - link
+          - email
+          - underline
+      partners:
+        type: structure
+        label: Partenaires
+        extends: fields/teamMember
+        sortBy: name
