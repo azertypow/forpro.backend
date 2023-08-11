@@ -22,13 +22,15 @@ columns:
         type: select
         required: true
         options:
-          - brown_purple_red
-          - sky_blue_orange
-          - green_pink_blue
-          - brown_yellow_purple
-          - white_pink_blue
-          - orange_green_pink
-          - purple_white_blue
+          - fp-var-theme-color-accueil
+          - fp-var-theme-color-learningLab
+          - fp-var-theme-color-makerlab
+          - fp-var-theme-color-foodlab
+          - fp-var-theme-color-hotel_entreprise
+          - fp-var-theme-color-grandlab
+          - fp-var-theme-color-creche
+          - fp-var-theme-color-ecole_horlogerie
+          - fp-var-theme-color-default
 
 
   - width: 2/3
