@@ -25,7 +25,7 @@ if( $findSectionListedPage->first() == null ) {
   die();
 }
 
-$sections = $findSectionListedPage->childrenAndDrafts();
+$sections = $findSectionListedPage->children();
 
 $pagesToReturn = $sections->map(function (Cms\Page $value){
   return [
