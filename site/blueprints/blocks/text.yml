@@ -13,6 +13,7 @@ fields:
 #      - heading
     marks:
       - italic
+      - bold
       - link
       - email
       - underline
