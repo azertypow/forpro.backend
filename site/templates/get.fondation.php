@@ -18,7 +18,7 @@ $findFondationPage = $site->find('fondation');
 
 if( $findFondationPage->first() == null ) {
   echo json_encode([
-    'errors' => ['can\'t find page "home"'],
+    'errors' => ['can\'t find page "fondation"'],
   ]);
   die();
 }
