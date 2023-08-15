@@ -48,6 +48,7 @@ columns:
           - text
           - image
           - quote
+          - list
       team:
         type: structure
         label: L'équipe
