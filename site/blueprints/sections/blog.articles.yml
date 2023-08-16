@@ -6,3 +6,7 @@ template: blog.article
 empty: Pas d'articles encore
 sortBy: publicationDate desc
 search: true
+image:
+  query: page.coverImage.toFile
+  cover: true
+layout: cards
