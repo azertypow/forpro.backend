@@ -62,3 +62,4 @@ columns:
         extends: sections/blog.articles
         label: Article.s publié.s
         status: listed
+        info: Privilégier les images horizontales pour optimiser leurs recadrages
