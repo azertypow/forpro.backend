@@ -20,6 +20,7 @@ columns:
     width: 2/3
     fields:
       coverImage:
+        info: Privilégier les images horizontales pour optimiser leurs recadrages
         label: Image de couverture
         type: files
         query: page.images
