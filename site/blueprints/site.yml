@@ -18,7 +18,7 @@ columns:
           - home
         layout: cards
         size: medium
-        text: ""
+        text: " "
 
   - width: 1/3
     sections:
@@ -32,7 +32,7 @@ columns:
           - batiment
         layout: cards
         size: medium
-        text: ""
+        text: " "
 
 
   - width: 1/3
@@ -42,12 +42,12 @@ columns:
         type: pages
         image:
           cover: true
-        status: all
+        status: listed
         template:
           - foundation
         layout: cards
         size: medium
-        text: ""
+        text: " "
 
 
 
@@ -58,12 +58,12 @@ columns:
         type: pages
         image:
           cover: true
-        status: all
+        status: listed
         template:
           - partenaires
         layout: cards
         size: medium
-        text: ""
+        text: " "
 
   - width: 1/3
     sections:
@@ -77,4 +77,4 @@ columns:
           - blog
         layout: cards
         size: medium
-        text: ""
+        text: " "
