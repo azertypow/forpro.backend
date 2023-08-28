@@ -27,7 +27,7 @@ if( $findFondationPage->first() == null ) {
 echo json_encode([
   'title'         =>  $findFondationPage->title()->value(),
 
-  'coverImage'    =>  $findFondationPage->coverImage() != null ? getJsonEncodeImageData($findFondationPage->coverImage()->toFile()) : null,
+  'coverImage'    =>  $findFondationPage->coverImage()->toFile() != null ? getJsonEncodeImageData($findFondationPage->coverImage()->toFile()) : null,
   'textIntro'     =>  $findFondationPage->textIntro()->value(),
   'blockContent'  =>  $findFondationPage->blockContent()->toBlocks()->map(fn(Cms\Block $blockItem) => getDefaultBlogContent($blockItem))->data(),
   'team'          =>  $findFondationPage->team()->toStructure()->map(
