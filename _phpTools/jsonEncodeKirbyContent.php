@@ -126,6 +126,7 @@ function getTeamItemStructure(StructureObject $teamMemberItem): array {
         'name'    => $teamMemberItem->name()->value(),
         'topic'   => $teamMemberItem->topic()->value(),
         'link'    => $teamMemberItem->link()->value(),
+        'email'   => $teamMemberItem->email()->value(),
         'cover'   => getImageArrayDataInPage($teamMemberItem),
         'text'    => reverseMail($teamMemberItem->text()->value()),
     ];
