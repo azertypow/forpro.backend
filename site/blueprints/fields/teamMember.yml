@@ -21,7 +21,7 @@ fields:
     label: Lien
     type: url
   email:
-    label: Lien
+    label: Email
     type: email
   coverImage:
     label: Photo
