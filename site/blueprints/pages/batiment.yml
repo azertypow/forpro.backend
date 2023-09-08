@@ -10,7 +10,6 @@ num: zero
 
 image:
   back: black
-  query: page.coverImage.toFile()
   icon: 📝
 
 
