@@ -14,7 +14,6 @@ options:
 
 image:
   back: black
-  query: page.coverImage.toFile()
   icon: 📝
 
 status:

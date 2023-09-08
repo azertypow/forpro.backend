@@ -4,7 +4,6 @@ title: Les Partenaires
 
 image:
   back: black
-  query: page.coverImage.toFile()
   icon: 📝
 
 options:

@@ -4,7 +4,6 @@ title: La Fondation
 
 image:
   back: black
-  query: page.coverImage.toFile()
   icon: 📝
 
 options:
